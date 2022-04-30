@@ -30,25 +30,37 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     activeCardColor,
-                    iconContent(),
+                    iconContent(FontAwesomeIcons.mars, 'male'),
                   ),
                 ),
                 Expanded(
-                  child: ReusableCard(activeCardColor),
+                  child: ReusableCard(
+                      activeCardColor,
+                      iconContent(FontAwesomeIcons.mars, 'male'),
+                  ),
                 ),
               ],
             ),
           ),
           Expanded(
-            child: ReusableCard(activeCardColor),
+            child: ReusableCard(
+              activeCardColor,
+              iconContent(FontAwesomeIcons.mars, 'male'),
+            ),
           ),
           Expanded(child: Row(
             children: <Widget>[
               Expanded(
-                child: ReusableCard(activeCardColor),
+                child: ReusableCard(
+                    activeCardColor,
+                    iconContent(FontAwesomeIcons.mars, 'male'),
+                ),
               ),
               Expanded(
-                child: ReusableCard(activeCardColor),
+                child: ReusableCard(
+                    activeCardColor,
+                    iconContent(FontAwesomeIcons.mars, 'male'),
+                ),
               ),
             ],
           )),
@@ -74,17 +86,17 @@ class iconContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const <Widget> [
+      children: <Widget> [
         Icon(
-          FontAwesomeIcons.icon,
+        icon,
+          color: Colors.white,
           size: 80.0,
         ),
-        SizedBox(
+        const SizedBox(
           height: 15.0,
         ),
-        Text(
-          label,
-          style: TextStyle(
+        Text( label,
+          style: const TextStyle(
           fontSize: 18.0,
           color:  Color(0xFF8D8E98),
           ),
