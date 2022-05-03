@@ -6,12 +6,16 @@ class ReusableCard extends StatelessWidget {
 
   final Color colour;
   final Widget cardChild;
-  final Function onPress;
+
+  // this is the problem.
+  final void Function()? onPress;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      // -----
       onTap: onPress,
+      // -----
       child: Container(
         width: double.infinity,
         child: cardChild,
